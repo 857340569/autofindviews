@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Autofindviews
+Bundle-SymbolicName: autofindviews;singleton:=true
+Bundle-Version: 2.0.1.qualifier
+Bundle-Activator: autofindviews.Activator
+Bundle-Vendor: zjp
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-AutoStart: true

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="autofindviews.contribution1"
+            nameFilter="*.xml"
+            >
+         <action
+               label="AutoFindViews"
+               class="autofindviews.popup.actions.FindAction"
+               enablesFor="1"
+               definitionId="autofindviews.popup.actions" 
+               id="autofindviews.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="autofindviews.commands.category">
+      </category>
+      <command
+            name="Sample Command"
+            categoryId="autofindviews.commands.category"
+            id="autofindviews.popup.actions">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="autofindviews.popup.actions"
+            class="autofindviews.popup.actions.OperHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="autofindviews.popup.actions"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+5"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+
+</plugin>
